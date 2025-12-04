@@ -19,6 +19,8 @@ Scaling Generative Recommendation**
 
 ## 📢 Announcement
 
+- 202512-04 - We update new scripts to support processing the Amazon23 dataset.
+
 - 2025-12-01 - We fix a bug in data.py that could cause the SID–item alignment task to see the answers in advance. This was because we had previously attempted to use partial trajectories to guide the full SID–item generation and does not affect the model performance.
 
 - 2025-11-20 — The SID construction method in **RQ-Kmeans+** has been updated (first proposed in **GPR** and this is the first open-source reproduction).
@@ -73,8 +75,10 @@ Scaling Generative Recommendation**
 | `LogitProcessor.py`                | Logit processor for constrained decoding (Python implementation)                                         |
 | `data.py`                | Data pipeline for SFT and RL training                          |
 | `convert_dataset.py`                | Converts an RQ-trained dataset to the SFT-then-RL format                                            |
-| `data/amazon18_data_process.sh`                |    Shell script to filter and preprocess Amazon data into an RQ-ready format                                      |
-| `data/amazon18_data_process.py`                |   Python implementation of the Amazon data preprocessing pipeline                                        |
+| `data/amazon18_data_process.sh`                |    Shell script to filter and preprocess Amazon18 data into an RQ-ready format                                      |
+| `data/amazon18_data_process.py`                |   Python implementation of the Amazon18 data preprocessing pipeline                                        |
+| `data/amazon23_data_process.sh`                |    Shell script to filter and preprocess Amazon23 data into an RQ-ready format                                      |
+| `data/amazon23_data_process.py`                |   Python implementation of the Amazon23 data preprocessing pipeline                                        |
 | `rq/text2emb/amazon_text2emb.sh`                |   Shell script to generate item embeddings (title + description) via emb_model for the Amazon dataset                                   |
 | `rq/text2emb/amazon_text2emb.py`                |   Python implementation of the above embedding generation                                         |
 | `rq/generate_indices.py`                |   Generates the SID file after training an RQ-VAE model                                       |
